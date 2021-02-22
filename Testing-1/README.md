@@ -2,7 +2,7 @@
 To build:
 
 ```
-    cd qwt-example
+    cd testing
     cmake .
     make
 ```
