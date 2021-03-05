@@ -10,6 +10,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt5 COMPONENTS Multimedia REQUIRED) 
 
 add_executable(qwt-example
   window.cpp
@@ -18,5 +19,5 @@ add_executable(qwt-example
 
 target_link_libraries(qwt-example Qt5::Widgets)
 target_link_libraries(qwt-example qwt-qt5)
-
+target_link_libraries(qwt-example Qt5::Multimedia)
 install(TARGETS qwt-example)

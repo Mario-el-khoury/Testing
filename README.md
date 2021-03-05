@@ -1,8 +1,8 @@
-# QwtExample
+# Smart-intonation-test
 
 A simple example program using Qt/Qwt widgets.
 
-![alt tag](screenshot.png)
+
 
 ## Making it work
 
@@ -26,5 +26,5 @@ To build:
 To run:
 
 ```
-    ./qwt-example
+    ./Smart-intonation-test
 ```

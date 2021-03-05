@@ -1,5 +1,7 @@
 #include "window.h"
-
+#include "audioinput.h"
+#include <QAudioRecorder>
+#include <QMediaPlayer>
 #include <QApplication>
 
 // Main program
@@ -13,6 +15,7 @@ int main(int argc, char *argv[])
 
 	// call the window.timerEvent function every 40 ms
 	window.startTimer(40);
+
 
 	// execute the application
 	return app.exec();

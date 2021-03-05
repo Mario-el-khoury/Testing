@@ -1,13 +1,15 @@
 #ifndef WINDOW_H
 #define WINDOW_H
-
-#include <qwt/qwt_thermo.h>
-#include <qwt/qwt_knob.h>
+#include <qwt/qwt_arrow_button.h>
 #include <qwt/qwt_plot.h>
 #include <qwt/qwt_plot_curve.h>
-
+#include <qwt/qwt_plot_textlabel.h>                  //Text
 #include <QBoxLayout>
+#include <QtMultimedia>
+//#include <QVideoWidget>
 
+
+//#include <QAudioRecorder>
 // #include "adcreader.h"
 
 // class definition 'Window'
@@ -25,23 +27,34 @@ public:
 
 public slots:
 	void setGain(double gain);
-
+     void playslot();           //declare a slot called from the pushbutton1
+	 void quitApp();              //declare a slot to quit the app
+	 void pauseslot();     //declare a slot that pause the learning
+	 
 // internal variables for the window class
 private:
-	QwtKnob      *knob;
-	QwtThermo    *thermo;
-	QwtPlot      *plot;
-	QwtPlotCurve *curve;
+
+	QPushButton *pushbutton1;
+	QPushButton *pushbutton2;
+	QPushButton *pushbutton3;
+    QPushButton *quitbutton;
+	QPushButton *stopbutton;
+    QwtPlot *plot;
+	QAudioRecorder *audioRecorder;
+	QMediaPlayer *player;
+    QVideoWidget* video;
+
+	
 
 	// layout elements from Qt itself http://qt-project.org/doc/qt-4.8/classes.html
 	QVBoxLayout  *vLayout;  // vertical layout
 	QHBoxLayout  *hLayout;  // horizontal layout
 
-	static const int plotDataSize = 100;
+	//static const int plotDataSize = 100;
 
 	// data arrays for the plot
-	double xData[plotDataSize];
-	double yData[plotDataSize];
+	//double xData[plotDataSize];
+	//double yData[plotDataSize];
 
 	double gain;
 	int count;
@@ -50,3 +63,4 @@ private:
 };
 
 #endif // WINDOW_H
+
