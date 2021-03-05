@@ -26,5 +26,5 @@ To build:
 To run:
 
 ```
-    ./Smart-intonation-test
+    ./qwt-example
 ```
